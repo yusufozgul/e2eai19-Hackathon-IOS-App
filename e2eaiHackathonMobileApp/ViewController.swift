@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     func getResult(key: String, completion: @escaping (String) -> Void)
     {
-        let url = URL(string: "https://mobileapi.hepsiburada.com/api/CategorySearchV5?categoryId=")
+        let url = URL(string: "http://http://40.121.157.250/\(key)")
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
             guard let data = data else { return }
             completion(String(data: data, encoding: .utf8)!)
